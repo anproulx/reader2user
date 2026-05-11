@@ -1,5 +1,5 @@
 # PaperRun
-![alt text](Multiagent_presentation.png "Logo Title Text 1")
+![alt text](Multiagent_presentation.png (1) "Logo Title Text 1")
 
 This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility. It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, and execute experiments.
 
