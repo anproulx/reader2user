@@ -5,8 +5,11 @@ This repository provides an automated, multi-agent framework powered by AG2 to b
 The workflow is structured as follows:
 
 **1. Discovery & Audit**
-- Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs.
-- Analyst Agent: Scans the codebase to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
+- Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs. Reads pdf, finds urls, uses LLM to organize links into code and data repositories. Output json file, md file and log file. 
+- Analyst Agent: Scans the codebase and datasets to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
+
+**2. Simulate date** 
+- Simulator agent: Uses the Github repository and/or paper description if data not available to simulate artifical data in the right format for testing the code.
 
 **2. Strategic Gateway (HITL)**
 - Human-Admin: Reviews the audit report. The system pauses for the human to approve the run and decide between a Sample Run (using provided repo data) or a Custom Run (using the user's specific dataset).
@@ -16,7 +19,7 @@ The workflow is structured as follows:
 - Runner Agent: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. It captures all stderr logs for debugging.
 
 **4. Verification**
-- Reproducibility Agent: Performs a final statistical comparison between the local execution results and the metrics claimed in the original paper, flagging significant variances.
+- Reproducibility Agent: Performs a final statistical comparison between the local execution results and metrics claimed in the original paper, flagging significant variances.
 
 ### Prerequisites
 - Python 3.10+
