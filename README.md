@@ -14,8 +14,8 @@ The workflow is structured as follows:
 - Adapter Agent: (Triggered for custom data) Bridges the gap by mapping new data schemas to the repository's expected input format and resolving pathing conflicts.
 - Runner Agent: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. It captures all stderr logs for debugging.
 
-- 4. Verification
-Reproducibility Agent: Performs a final statistical comparison between the local execution results and the metrics claimed in the original paper, flagging significant variances.
+4. Verification
+- Reproducibility Agent: Performs a final statistical comparison between the local execution results and the metrics claimed in the original paper, flagging significant variances.
 
 ### Prerequisites
 - Python 3.10+
