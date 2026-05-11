@@ -24,16 +24,16 @@ The workflow is structured as follows:
 - OpenAI API Key (or supported LLM provider)
 
 ### Clone the repository
-git clone https://github.com/your-username/ag2-paper-repro.git
-cd ag2-paper-repro
+```git clone https://github.com/your-username/ag2-paper-repro.git
+cd ag2-paper-repro```
 
 ### Installation
-''git clone https://github.com/your-username/PaperRoute.git
+```git clone https://github.com/your-username/PaperRoute.git
 cd PaperRoute
-pip install -r requirements.txt''
+pip install -r requirements.txt```
 
 ### Usage 
-python main.py --paper "https://arxiv.org/pdf/xxxx.xxxx.pdf"
+```python main.py --paper "https://arxiv.org/pdf/xxxx.xxxx.pdf"```
 
 ### Outputs
 -Environment Log: A record of all dependencies installed.
