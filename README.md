@@ -41,17 +41,17 @@ pip install -r requirements.txt
 
 ### Usage 
 ```
-    # Standard run — Simulator triggers only if no data repo found
-    python multi_agent_pipeline.py paper.pdf --output-dir results/
+# Standard run — Simulator triggers only if no data repo found
+python multi_agent_pipeline.py paper.pdf --output-dir results/
 
-    # Force simulation even if data repos exist (human request)
-    python multi_agent_pipeline.py paper.pdf --output-dir results/ --simulate
+# Force simulation even if data repos exist (human request)
+python multi_agent_pipeline.py paper.pdf --output-dir results/ --simulate
 
-    # Never simulate
-    python multi_agent_pipeline.py paper.pdf --output-dir results/ --no-simulate
+# Never simulate
+python multi_agent_pipeline.py paper.pdf --output-dir results/ --no-simulate
 
-    # Demo-safe (always produces output if GroupChat loops)
-    python multi_agent_pipeline.py paper.pdf --output-dir results/ --fallback-on-loop
+# Demo-safe (always produces output if GroupChat loops)
+python multi_agent_pipeline.py paper.pdf --output-dir results/ --fallback-on-loop
 ```
 
 ### Outputs
