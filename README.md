@@ -41,7 +41,17 @@ pip install -r requirements.txt
 
 ### Usage 
 ```
-python main.py --paper "https://arxiv.org/pdf/xxxx.xxxx.pdf"
+    # Standard run — Simulator triggers only if no data repo found
+    python multi_agent_pipeline.py paper.pdf --output-dir results/
+
+    # Force simulation even if data repos exist (human request)
+    python multi_agent_pipeline.py paper.pdf --output-dir results/ --simulate
+
+    # Never simulate
+    python multi_agent_pipeline.py paper.pdf --output-dir results/ --no-simulate
+
+    # Demo-safe (always produces output if GroupChat loops)
+    python multi_agent_pipeline.py paper.pdf --output-dir results/ --fallback-on-loop
 ```
 
 ### Outputs
