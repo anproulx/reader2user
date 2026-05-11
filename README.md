@@ -5,13 +5,13 @@ This repository provides an automated, multi-agent framework powered by AG2 to b
 The workflow is structured as follows:
 
 **1. Discovery & Audit**
-- Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs. Reads pdf, finds urls, uses LLM to organize links into code and data repositories. Output json file, md file and log file. 
+- Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs. Reads pdf, finds urls, uses LLM to organize links into code and data repositories. Output .json file, .md file and log file. 
 - Analyst Agent: Scans the codebase and datasets to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
 
-**2. Simulate date** 
+**2. Simulate data** 
 - Simulator agent: Uses the paper by default to simulate data, and if Github repository link from Researcher Agent is available, also uses this complementarily to simulate artifical data.
 
-**2. Strategic Gateway (HITL)**
+**2. Strategic Gateway**
 - Human-Admin: Reviews the audit report. The system pauses for the human to approve the run and decide between a Sample Run (using provided repo data) or a Custom Run (using the user's specific dataset).
 
 **3. Alignment & Execution**
