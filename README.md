@@ -1,26 +1,24 @@
 # PaperRun
 ![alt text](Multiagent_presentation.png "Logo Title Text 1")
 
-This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility. It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, adapt to custom datasets, and execute experiments with human oversight.
+This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility. It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, and execute experiments with human oversight.
 
 The workflow is structured as follows:
 
 **1. Discovery & Audit**
-- Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs. Reads pdf, finds urls, uses LLM to organize links into code and data repositories. Output .json file, .md file and log file. 
-- Analyst Agent: Scans the codebase and datasets to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
-
+- Executor: Extracts links and official implementation details from paper PDF/text inputs. Organize links into code and data repositories. Output .json file, .md file and log file. 
+- Planner : Checks URL
+- Analyst : Inspect code repository
+- Critic : Challenges analyst
+  
 **2. Simulate data** 
-- Simulator agent: Uses the paper by default to simulate data, and if Github repository link from Researcher Agent is available, also uses this complementarily to simulate artifical data.
+- Simulator: Uses the paper and Github repository to simulate artifical data.
 
-**2. Strategic Gateway**
-- Human-Admin: Reviews the audit report. The system pauses for the human to approve the run and decide between a Sample Run (using provided repo data) or a Custom Run (using the user's specific dataset).
-
-**3. Alignment & Execution**
-- Adapter Agent: (Triggered for custom data) Bridges the gap by mapping new data schemas to the repository's expected input format and resolving pathing conflicts.
-- Runner Agent: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. It captures all stderr logs for debugging.
+**3. Execution**
+- Executor: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. Reports error logs. 
 
 **4. Verification**
-- Reproducibility Agent: Performs a final statistical comparison between the local execution results and metrics claimed in the original paper, flagging significant variances.
+- Judge: Reports on Github repository completeness and dependencies. If not simulated data, report results and compare to paper.
 
 ### Prerequisites
 - Python 3.10+
@@ -49,4 +47,4 @@ python main.py --paper "https://arxiv.org/pdf/xxxx.xxxx.pdf"
 ### Outputs
 - Environment Log: A record of all dependencies installed.
 - Execution Trace: Full logs of the code run.
-- Reproducibility Report: A comparison table of Original Paper Results vs. Your Results.
+- Judge Report: A comparison table of Original Paper Results vs. Your Results.
