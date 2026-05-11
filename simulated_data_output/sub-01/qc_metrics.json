@@ -1,0 +1,6 @@
+{
+  "snr": 60.7,
+  "motion_mm_per_frame": 0.334,
+  "qc_pass": true,
+  "notes": "QC check: SNR=60.7, Motion=0.334 -> PASS"
+}

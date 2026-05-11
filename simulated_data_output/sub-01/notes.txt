@@ -1,0 +1,1 @@
+Subject sub-01 demographics: age 8, sex F, diagnosis at-risk, handedness left. ROIs analyzed: L_PFC, R_PFC, L_IPS, R_IPS, ACC.
