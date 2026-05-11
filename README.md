@@ -1,8 +1,6 @@
-# readnreport
+# Paper2Run
 
-This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility.
-
-It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, adapt to custom datasets, and execute experiments with human oversight.
+This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility. It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, adapt to custom datasets, and execute experiments with human oversight.
 
 The workflow is structured into five distinct phases:
 - **Discovery & Analysis**: A Researcher Agent identifies the official GitHub repository linked to a paper, while an Analyst Agent audits the file structure and predicts potential environment conflicts or missing assets.
