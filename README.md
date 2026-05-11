@@ -3,6 +3,7 @@
 This repository provides an automated, multi-agent framework powered by AG2 to bridge the gap between AI research papers and code reproducibility. It orchestrates a specialized pipeline of autonomous agents to discover codebases, analyze environment requirements, adapt to custom datasets, and execute experiments with human oversight.
 
 The workflow is structured as follows:
+
 **1. Discovery & Audit**
 - Researcher Agent: Extracts GitHub repository links and official implementation details from PDF/text inputs.
 - Analyst Agent: Scans the codebase to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
