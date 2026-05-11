@@ -6,19 +6,19 @@ This repository provides an automated, multi-agent framework powered by AG2 to b
 The workflow is structured as follows:
 
 **1. Discovery & Audit**
-- Executor: Extracts links and official implementation details from paper PDF/text inputs. Organize links into code and data repositories. 
-- Planner : Checks URL
-- Analyst : Inspect code repository
-- Critic : Challenges analyst
+- **Executor**: Extracts links and official implementation details from paper PDF/text inputs. Organize links into code and data repositories. 
+- **Planner** : Checks URL
+- **Analyst** : Inspect code repository
+- **Critic** : Challenges analyst
   
 **2. Simulate data** 
-- Simulator: Uses the paper and Github repository to simulate artifical data.
+- **Simulator**: Uses the paper and Github repository to simulate artifical data.
 
 **3. Execution**
-- Executor: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. Reports error logs. 
+- **Executor**: Operates in a secure container to git clone, parse imports to reconstruct missing environments (beyond requirements.txt), and execute scripts. Reports error logs. 
 
 **4. Verification**
-- Judge: Reports on Github repository completeness and dependencies. If not simulated data, report results and compare to paper.
+- **Judge**: Reports on Github repository completeness and dependencies. If not simulated data, report results and compare to paper.
 
 ### Prerequisites
 - Python 3.10+
