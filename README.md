@@ -9,7 +9,7 @@ The workflow is structured as follows:
 - Analyst Agent: Scans the codebase and datasets to identify file structures, hidden dependencies, and potential runtime "landmines" (missing weights, deprecated APIs).
 
 **2. Simulate date** 
-- Simulator agent: Uses the Github repository link from Researcher Agent if available is true. If Github link not available, resorts to paper description to simulate artifical data in the right format for testing the code.
+- Simulator agent: Uses the paper by default to simulate data, and if Github repository link from Researcher Agent is available, also uses this complementarily to simulate artifical data.
 
 **2. Strategic Gateway (HITL)**
 - Human-Admin: Reviews the audit report. The system pauses for the human to approve the run and decide between a Sample Run (using provided repo data) or a Custom Run (using the user's specific dataset).
