@@ -6,7 +6,7 @@ This repository provides an automated, multi-agent framework powered by AG2 to b
 The workflow is structured as follows:
 
 **1. Discovery & Audit**
-- Executor: Extracts links and official implementation details from paper PDF/text inputs. Organize links into code and data repositories. Output .json file, .md file and log file. 
+- Executor: Extracts links and official implementation details from paper PDF/text inputs. Organize links into code and data repositories. 
 - Planner : Checks URL
 - Analyst : Inspect code repository
 - Critic : Challenges analyst
