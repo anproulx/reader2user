@@ -1,0 +1,2 @@
+subject_id: sub-12
+status: simulated dataset

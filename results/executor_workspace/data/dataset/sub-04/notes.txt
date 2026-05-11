@@ -1,0 +1,2 @@
+This is a simulated RBC-like dataset for demonstration purposes.
+Subject folders contain demographics, behavioral metrics, and mock imaging data.
